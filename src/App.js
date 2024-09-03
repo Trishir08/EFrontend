@@ -10,6 +10,29 @@ import men_banner from  './componets/data/banner_mens.png'
 import women_banner from './componets/data/banner_women.png'
 import kid_banner from './componets/data/banner_kids.png'
 
+
+function Success() {
+  return (
+      <div>
+          <h1>Payment Successful!</h1>
+          <p>Thank you for your purchase.</p>
+      </div>
+  );
+}
+
+function Cancel() {
+  return (
+      <div>
+          <h1>Payment Cancelled</h1>
+          <p>Your payment was not processed.</p>
+      </div>
+  );
+}
+
+
+
+
+
 function App() {
   return (
     <div>
@@ -25,6 +48,8 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/login" element={<LoginSignup/>}/>
+          <Route path="/success" element={<Success/>}/>
+          <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
